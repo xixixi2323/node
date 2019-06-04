@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>你好</h1>
+    <!-- 2：利用模板引擎的语法进行循环遍历展示数据 -->
+    <ul>
+        <!-- 使用each进行循环，循环的内容直接在each后 -->
+        <!-- 注意：在循环中值和下标的变量名字是固定  下标使用$index(不能变) 值使用$value(不能变) -->
+        {{each data}}
+        <!-- {{if}}****{{/if}} 进行判断 -->
+        {{if $value.age >= 20}}
+        <li>{{$value.name}}</li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</body>
+</html>
